@@ -30,20 +30,23 @@ classDiagram
 
   2. Uso
 ```mermaid
-  usecaseDiagram
-    actor Usuario as "Usuário"
-    actor Admin as "Admin (Opcional)"
+  flowchart TD
+    A[Início] --> B{Tipo de Ação}
 
-    Usuario --> (Cadastrar Tarefa)
-    Usuario --> (Atualizar Status da Tarefa)
-    Usuario --> (Editar Tarefa)
-    Usuario --> (Excluir Tarefa)
-    Admin --> (Gerenciar Usuários)
+    B -->|Usuário| C[Cadastrar Usuário]
+    B -->|Usuário| D[Cadastrar Tarefa]
+    B -->|Usuário| E[Atualizar Status da Tarefa]
+    B -->|Usuário| F[Editar Tarefa]
+    B -->|Usuário| G[Excluir Tarefa]
+    B -->|Usuário| H[Visualizar Tarefas]
 
-    (Cadastrar Tarefa) --> (Visualizar Tarefa)
-    (Atualizar Status da Tarefa) --> (Visualizar Tarefa)
-    (Editar Tarefa) --> (Visualizar Tarefa)
-    (Excluir Tarefa) --> (Visualizar Tarefa)
+    C --> I[Fim]
+    D --> I
+    E --> I
+    F --> I
+    G --> I
+    H --> I
+
 
 
 
